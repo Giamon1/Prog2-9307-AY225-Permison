@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PLW2 Attendance Tracker</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ded9d9;
+            color: #333;
+        }
+
+        #container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #333;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #welcome {
+            margin-top: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        #timestamp {
+            font-size: 13px;
+            margin-top: 5px;
+            color: #666;
+        }
+
+        #downloadBtn {
+            margin-top: 15px;
+            background-color: #444;
+        }
+
+        #downloadBtn:hover {
+            background-color: #666;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Attendance Login</h2>
+
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Log In</button>
+        </form>
+
+        <p id="errorMsg" style="color:#d44333; margin-top:10px; font-size:14px;"></p>
+
+        <h3 id="welcome"></h3>
+        <p id="timestamp"></p>
+
+    <table id="attendanceTable" style="margin-top:20px; width:100%; border-collapse: collapse; display:none;">
+        <tr style="background:#eee;">
+            <th style="border:1px solid #999; padding:8px;">Username</th>
+             <th style="border:1px solid #999; padding:8px;">Timestamp</th>
+        </tr>
+    </table>
+     <button id="downloadBtn" style="display:none;">Download Attendance Summary</button>
+    <button id="clearBtn" style="display:none; margin-top:10px; background:#444; color:white;">Clear Attendance</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

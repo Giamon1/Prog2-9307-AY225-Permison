@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PrelimLabWork3</title>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 400px;
+            background: white;
+            padding: 30px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .output {
+            background: #eee;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-top: 10px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Required Prelim Exam Score Calculator</h2>
+
+    <label>Attendance:</label>
+    <input type="number" id="attendance">
+
+    <label>Lab Work 1:</label>
+    <input type="number" id="lab1">
+
+    <label>Lab Work 2:</label>
+    <input type="number" id="lab2">
+
+    <label>Lab Work 3:</label>
+    <input type="number" id="lab3">
+
+    <div style="display:flex; justify-content: space-between;">
+        <button onclick="compute()">Compute</button>
+        <button onclick="clearFields()">Clear</button>
+    </div>
+
+    <div id="output" class="output"></div>
+</div>
+
+<script src="PrelimLabWork3.js"></script>
+</body>
+</html>
